@@ -4,13 +4,18 @@ import { global } from '@js/elements/main/slider/slider.js';
 const table = createDomElement('div', 'table', '', global);
 
 const info = createDomElement('div', 'table__info', '', table);
-createDomElement('p', 'table__info_title', 'Global Cases', info);
-createDomElement('p', 'table__info_number', '74 248 878', info);
+const title = createDomElement('p', 'table__info_title', 'Global Cases', info);
+const counter = createDomElement('p', 'table__info_counter', '74 248 878', info);
 
-createDomElement('div', 'table__indicators', '', table);
+const indicators = createDomElement('div', 'table__indicators', '', table);
 
-const buttons = createDomElement('div', 'table__buttons', '', table);
+const button = createDomElement('div', 'table__button', '', table);
+const death = createDomElement('button', 'table__button_death', 'Global Deaths', button);
+const recovered = createDomElement('button', 'table__button_recovered', 'Global Recovered', button);
+const calculate = createDomElement('button', 'table__button_calculate', 'per / 100th', button);
 
-createDomElement('button', 'table__button', 'Global Deaths', buttons);
-createDomElement('button', 'table__button', 'Global Recovered', buttons);
-createDomElement('button', 'table__button', 'per / 100th', buttons);
+export {
+  info, title, counter,
+  indicators,
+  death, recovered, calculate,
+};
