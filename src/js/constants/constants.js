@@ -31,7 +31,13 @@ const DOM_INDIVIDUAL_ELEMENT = {
   },
 };
 
+const SWIPER_NAMES = {
+  first: 'global',
+  second: 'country',
+};
+
 export {
   DOM_GLOBAL_ELEMENT,
   DOM_INDIVIDUAL_ELEMENT,
+  SWIPER_NAMES,
 };
