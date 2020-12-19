@@ -86,21 +86,21 @@ footer {
       .table__info_title {
         font-size: 20px;
       }
-      .table__info_number {
+      .table__info_counter {
         font-size: 40px;
       }
     }
 
-    .table__buttons {
+    .table__button {
       display: flex;
       cursor: pointer;
       height: 50px;
-    }
-    .table__button {
-      width: 100px;
 
-      &:hover {
-        background-color: rgb(186, 162, 187);
+      button {
+        width: 100px;
+        &:hover {
+          background-color: rgb(186, 162, 187);
+        }
       }
     }
 

@@ -31,10 +31,6 @@ const DOM_INDIVIDUAL_ELEMENT = {
   },
 };
 
-console.log(DOM_INDIVIDUAL_ELEMENT.window.map);
-console.log(DOM_INDIVIDUAL_ELEMENT.table.country.flag);
-console.log(DOM_INDIVIDUAL_ELEMENT.table.country.name);
-
 export {
   DOM_GLOBAL_ELEMENT,
   DOM_INDIVIDUAL_ELEMENT,
