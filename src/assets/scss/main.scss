@@ -1,0 +1,284 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header,
+footer,
+main {
+  width: 100%;
+  min-width: 350px;
+}
+header,
+footer {
+  height: 10%;
+  border: 1px solid red;
+}
+main {
+  position: relative;
+  height: auto;
+  min-height: 600px;
+  height: 80%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 150px;
+    height: auto;
+  }
+}
+
+.school {
+  padding-right: 10px;
+}
+
+.paternity {
+  padding-left: 10px;
+  display: flex;
+  p,
+  a {
+    margin-right: 10px;
+  }
+}
+
+.swiper-container {
+  max-width: 1200px;
+  min-height: 300px;
+  height: 100%;
+  border: 1px solid red;
+}
+
+#global {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    max-height: 600px;
+    height: 80%;
+    min-height: 400px;
+    background-color: rgb(165, 235, 206);
+
+    .table__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .table__info_title {
+        font-size: 20px;
+      }
+      .table__info_number {
+        font-size: 40px;
+      }
+    }
+
+    .table__buttons {
+      display: flex;
+      cursor: pointer;
+      height: 50px;
+    }
+    .table__button {
+      width: 100px;
+
+      &:hover {
+        background-color: rgb(186, 162, 187);
+      }
+    }
+
+    .table__indicators {
+      background-color: rgba(235, 205, 165, 0.322);
+      flex-grow: 1;
+    }
+  }
+
+  .graph {
+    width: 65%;
+    max-height: 600px;
+    height: 80%;
+    min-height: 400px;
+    margin-left: 20px;
+    background-color: darkgray;
+  }
+}
+
+#individual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    max-height: 600px;
+    height: 80%;
+    min-height: 400px;
+    background-color: rgb(165, 235, 206);
+    border: 1px solid red;
+
+    .search {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 50px;
+
+      .search__input {
+        border: 2px solid rgb(0, 115, 182);
+        width: auto;
+        height: 30px;
+      }
+
+      .search__button {
+        height: 30px;
+        &:hover {
+          background-color: rgb(186, 162, 187);
+        }
+      }
+    }
+
+    .country {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 50px;
+      .country__flag {
+        width: 40px;
+        height: 30px;
+        background-color: darkred;
+      }
+      .country__name {
+        font-size: 20px;
+      }
+    }
+
+    .indicators {
+      background-color: rgba(235, 205, 165, 0.322);
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .case,
+      .deat,
+      .recover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 25px;
+      }
+
+      .case {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .toggles {
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      button {
+        width: 150px;
+        height: 50px;
+
+        &:hover {
+          background-color: darksalmon;
+        }
+      }
+    }
+  }
+
+  .window {
+    width: 65%;
+    max-height: 600px;
+    height: 80%;
+    min-height: 400px;
+    margin-left: 20px;
+    .window__graph {
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-color: darkgray;
+    }
+
+    .window__map {
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(3, 114, 12);
+    }
+
+    .active {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  #global {
+    .graph {
+      width: 50%;
+    }
+  }
+
+  #individual {
+    .window {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 916px) {
+  #global {
+    .table {
+      height: 15%;
+    }
+    .graph {
+      display: none;
+      width: 90%;
+      margin-left: 0;
+    }
+  }
+
+  #individual {
+    .table {
+      height: 15%;
+    }
+    .window {
+      display: none;
+      width: 90%;
+      margin-left: 0;
+    }
+  }
+
+  body {
+    background-color: rgb(50, 228, 228);
+  }
+}
