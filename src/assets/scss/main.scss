@@ -18,7 +18,6 @@ main {
 header,
 footer {
   height: 10%;
-  border: 1px solid red;
 }
 main {
   position: relative;
@@ -61,7 +60,16 @@ footer {
   max-width: 1200px;
   min-height: 300px;
   height: 100%;
-  border: 1px solid red;
+}
+
+.swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+  line-height: 26px;
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: rgb(0, 168, 190);
+  color: white;
 }
 
 #global {
@@ -88,21 +96,21 @@ footer {
       .table__info_title {
         font-size: 20px;
       }
-      .table__info_number {
+      .table__info_counter {
         font-size: 40px;
       }
     }
 
-    .table__buttons {
+    .table__button {
       display: flex;
       cursor: pointer;
       height: 50px;
-    }
-    .table__button {
-      width: 100px;
 
-      &:hover {
-        background-color: rgb(186, 162, 187);
+      button {
+        width: 100px;
+        &:hover {
+          background-color: rgb(186, 162, 187);
+        }
       }
     }
 
@@ -137,7 +145,6 @@ footer {
     height: 80%;
     min-height: 400px;
     background-color: rgb(165, 235, 206);
-    border: 1px solid red;
 
     .search {
       display: flex;
@@ -276,9 +283,5 @@ footer {
       width: 90%;
       margin-left: 0;
     }
-  }
-
-  body {
-    background-color: rgb(50, 228, 228);
   }
 }

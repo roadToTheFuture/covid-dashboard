@@ -1,4 +1,6 @@
 import { createDomElement } from '@js/utils/createDomElement.js';
 import { global } from '@js/elements/main/slider/slider.js';
 
-createDomElement('div', 'graph', '', global);
+const globalGraph = createDomElement('div', 'graph', '', global);
+
+export { globalGraph };
