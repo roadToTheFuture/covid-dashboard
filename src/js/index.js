@@ -1,2 +1,2 @@
 import '@js/elements/index.js';
-import '@js/utils/getDataAPI.js';
+import '@js/events/events.js';
