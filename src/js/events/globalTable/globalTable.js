@@ -1,24 +1,35 @@
-import 'ag-grid-enterprise';
+import { BASE_URL } from '@js/constants/urls.js';
+import { getData } from '@js/events/request/getSummaryData.js';
 import { Grid } from 'ag-grid-community';
-import { DOM_GLOBAL_ELEMENT } from '@js/constants/constants.js';
 
-const columnDefs = [
-  { headerName: 'Make', field: 'make' },
-  { headerName: 'Model', field: 'model' },
-  { headerName: 'Price', field: 'price' },
-];
+const elem = getData(BASE_URL);
 
-const rowData = [
-  { make: 'Toyota', model: 'Celica', price: 35000 },
-  { make: 'Ford', model: 'Mondeo', price: 32000 },
-  { make: 'Porsche', model: 'Boxter', price: 72000 },
-];
+elem.then((data) => {
+  const tableInfo = [];
+  data.Countries.forEach((key) => {
+    tableInfo.push({ country: key.Country, confirmed: key.TotalConfirmed });
+  });
 
-const gridOptions = {
-  columnDefs: columnDefs,
-  rowData: rowData
-};
+  tableRender(tableInfo);
+});
 
-const eGridDiv = DOM_GLOBAL_ELEMENT.table.table;
+function tableRender(row) {
+  const head = [
+    {
+      headerName: 'Country', field: 'country', sortable: true, filter: true, flex: 1, editable: false,
+    },
+    {
+      headerName: 'Cases', field: 'confirmed', sortable: true, filter: true, flex: 1, editable: false,
+    },
+  ];
 
-new Grid(eGridDiv, gridOptions);
+  const gridOptions = {
+    columnDefs: head,
+    rowData: row,
+  };
+
+  const eGridDiv = document.querySelector('.table__indicators');
+  eGridDiv.classList.add('ag-theme-alpine');
+
+  new Grid(eGridDiv, gridOptions);
+}
