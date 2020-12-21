@@ -1,10 +1,3 @@
-// const getSummaryData = function () {
-//   return fetch( BASE_URL )
-//     .then((response) => response.json())
-//     .then((data) => data)
-//     .catch((error) => alert(error.message));
-// };
-
 async function getData(dataUrl) {
   try {
     const url = dataUrl;
@@ -16,4 +9,4 @@ async function getData(dataUrl) {
   }
 }
 
-export { getData };
+export { getData, getSummaryData };

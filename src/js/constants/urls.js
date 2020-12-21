@@ -1,3 +1,6 @@
-const BASE_URL = 'https://api.covid19api.com/summary';
+const COVID = {
+  world: 'https://disease.sh/v3/covid-19/all',
+  countries: 'https://disease.sh/v3/covid-19/countries',
+};
 
-export { BASE_URL };
+export { COVID };

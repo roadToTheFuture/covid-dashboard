@@ -1,25 +1,24 @@
-import { BASE_URL } from '@js/constants/urls.js';
+import { COVID } from '@js/constants/urls.js';
 import { getData } from '@js/events/request/getSummaryData.js';
 import { Grid } from 'ag-grid-community';
 
-const elem = getData(BASE_URL);
+async function tableRender() {
+  const elem = await getData(COVID.countries);
+  const row = [];
 
-elem.then((data) => {
-  const tableInfo = [];
-  data.Countries.forEach((key) => {
-    tableInfo.push({ country: key.Country, confirmed: key.TotalConfirmed });
+  elem.forEach((key) => {
+    row.push({ country: key.country, confirmed: key.cases, today: key.todayCases });
   });
 
-  tableRender(tableInfo);
-});
-
-function tableRender(row) {
   const head = [
     {
       headerName: 'Country', field: 'country', sortable: true, filter: true, flex: 1, editable: false,
     },
     {
       headerName: 'Cases', field: 'confirmed', sortable: true, filter: true, flex: 1, editable: false,
+    },
+    {
+      headerName: 'Today', field: 'today', sortable: true, filter: true, flex: 1, editable: false,
     },
   ];
 
@@ -33,3 +32,4 @@ function tableRender(row) {
 
   new Grid(eGridDiv, gridOptions);
 }
+tableRender();
