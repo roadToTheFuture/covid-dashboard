@@ -82,7 +82,7 @@ footer {
 }
 
 .swiper-container {
-  max-width: 1200px;
+  max-width: 1300px;
   min-height: 300px;
   height: 100%;
 }
@@ -107,7 +107,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 300px;
+    width: 350px;
     max-height: 600px;
     height: 80%;
     min-height: 400px;
@@ -130,12 +130,20 @@ footer {
       display: flex;
       cursor: pointer;
       height: 50px;
+      flex-wrap: wrap;
 
       button {
-        width: 100px;
+        flex-basis: 24%;
+
         &:hover {
           background-color: rgb(186, 162, 187);
         }
+      }
+      .table__button_recovered {
+        flex-grow: 1;
+      }
+      .table__button_date {
+        flex-basis: 100%;
       }
     }
 
@@ -151,6 +159,7 @@ footer {
     height: 80%;
     min-height: 400px;
     margin-left: 20px;
+    margin-right: 2%;
     background-color: darkgray;
   }
 }

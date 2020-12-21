@@ -12,10 +12,12 @@ const indicators = createDomElement('div', 'table__indicators', '', table);
 const button = createDomElement('div', 'table__button', '', table);
 const death = createDomElement('button', 'table__button_death', 'Global Deaths', button);
 const recovered = createDomElement('button', 'table__button_recovered', 'Global Recovered', button);
-const calculate = createDomElement('button', 'table__button_calculate', 'per / 100th', button);
+const calculate = createDomElement('button', 'table__button_calculate', 'People / 100 th', button);
+const cases = createDomElement('button', 'table__button_cases', 'Global Cases', button);
+const date = createDomElement('button', 'table__button_date', '20.30.2020', button);
 
 export {
   info, title, counter,
   indicators,
-  death, recovered, calculate,
+  death, recovered, calculate, cases, date,
 };

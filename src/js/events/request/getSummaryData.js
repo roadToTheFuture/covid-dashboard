@@ -9,4 +9,4 @@ async function getData(dataUrl) {
   }
 }
 
-export { getData, getSummaryData };
+export { getData };
