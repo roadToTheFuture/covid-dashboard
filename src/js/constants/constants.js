@@ -1,5 +1,5 @@
 import {
-  info, title, counter, indicators, death, recovered, calculate,
+  info, title, counter, indicators, death, recovered, calculate, cases, date,
 } from '@js/elements/main/global/table.js';
 import {
   search, input, button, country, flag, name, caseCount, deatCount, recoverCount, map, graph,
@@ -11,7 +11,9 @@ const DOM_GLOBAL_ELEMENT = {
   table: {
     info: { info, title, counter },
     table: indicators,
-    button: { death, recovered, calculate },
+    button: {
+      death, recovered, calculate, cases, date,
+    },
   },
   graph: globalGraph,
 };
