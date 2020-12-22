@@ -1,12 +1,17 @@
 import { COVID } from '@js/constants/urls.js';
 import { getData } from '@js/events/request/getSummaryData.js';
-import { Grid } from 'ag-grid-community';
+import { cases, indicators, title, counter } from '@js/elements/main/global/table.js';
+import render from '@js/utils/renderTable.js';
 
-async function tableRender() {
-  const elem = await getData(COVID.countries);
+export default async function generateCases() {
+  indicators.innerHTML = '';
+  const countryInfo = await getData(COVID.countries);
+  const worldInfo = await getData(COVID.world);
   const row = [];
+  title.textContent = 'Global Cases';
+  counter.textContent = `${worldInfo.cases}`;
 
-  elem.forEach((key) => {
+  countryInfo.forEach((key) => {
     row.push({ country: key.country, confirmed: key.cases, today: key.todayCases });
   });
 
@@ -22,14 +27,7 @@ async function tableRender() {
     },
   ];
 
-  const gridOptions = {
-    columnDefs: head,
-    rowData: row,
-  };
-
-  const eGridDiv = document.querySelector('.table__indicators');
-  eGridDiv.classList.add('ag-theme-alpine');
-
-  new Grid(eGridDiv, gridOptions);
+  render(head, row);
 }
-tableRender();
+
+cases.addEventListener('click', generateCases);
