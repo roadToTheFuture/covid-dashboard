@@ -2,6 +2,7 @@ import { COVID } from '@js/constants/urls.js';
 import { getData } from '@js/events/request/getSummaryData.js';
 import { cases, indicators, title, counter } from '@js/elements/main/global/table.js';
 import render from '@js/utils/renderTable.js';
+import numberWithCommas from '@js/utils/numberWithCommas.js';
 
 export default async function generateCases() {
   indicators.innerHTML = '';
@@ -9,7 +10,7 @@ export default async function generateCases() {
   const worldInfo = await getData(COVID.world);
   const row = [];
   title.textContent = 'Global Cases';
-  counter.textContent = `${worldInfo.cases}`;
+  counter.textContent = `${numberWithCommas(worldInfo.cases)}`;
 
   countryInfo.forEach((key) => {
     row.push({ country: key.country, confirmed: key.cases, today: key.todayCases });

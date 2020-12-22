@@ -2,6 +2,7 @@ import { COVID } from '@js/constants/urls.js';
 import { getData } from '@js/events/request/getSummaryData.js';
 import { death, indicators, title, counter } from '@js/elements/main/global/table.js';
 import render from '@js/utils/renderTable.js';
+import numberWithCommas from '@js/utils/numberWithCommas.js';
 
 async function generateDeaths() {
   indicators.innerHTML = '';
@@ -9,7 +10,7 @@ async function generateDeaths() {
   const worldInfo = await getData(COVID.world);
   const row = [];
   title.textContent = 'Global Deaths';
-  counter.textContent = `${worldInfo.deaths}`;
+  counter.textContent = `${numberWithCommas(worldInfo.deaths)}`;
 
   countryInfo.forEach((key) => {
     row.push({ country: key.country, confirmed: key.deaths, today: key.todayDeaths });
