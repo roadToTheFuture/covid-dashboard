@@ -3,6 +3,9 @@ import { individual } from '@js/elements/main/slider/slider.js';
 
 const window = createDomElement('div', 'window', '', individual);
 createDomElement('div', 'window__graph active', '', window);
+const winGrpah = createDomElement('div', 'window__graph active', '', window);
+const winMap = createDomElement('div', 'window__map', '', window);
 
-const map = createDomElement('div', 'window__map', '', window);
-createDomElement('div', 'window__map', '', map, 'id', 'mapid');
+createDomElement('div', '', '', winMap, 'id', 'mapid');
+
+export { winGrpah, winMap };
