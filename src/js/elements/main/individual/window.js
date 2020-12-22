@@ -5,5 +5,6 @@ const window = createDomElement('div', 'window', '', individual);
 
 const winGrpah = createDomElement('div', 'window__graph active', '', window);
 const winMap = createDomElement('div', 'window__map', '', window);
+createDomElement('div', '', '', winMap, 'id', 'mapid');
 
 export { winGrpah, winMap };
