@@ -256,21 +256,28 @@ footer {
   }
 
   .window {
+    position: relative;
     width: 65%;
     max-height: 600px;
     height: 80%;
     min-height: 400px;
     margin-left: 20px;
     .window__graph {
-      display: none;
+      position: absolute;
       width: 100%;
       height: 100%;
+      opacity: 0;
+      z-index: 15;
+      transition: all 0.5s;
     }
 
     .window__map {
-      display: none;
+      position: absolute;
       width: 100%;
       height: 100%;
+      opacity: 0;
+      z-index: 15;
+      transition: all 0.5s;
 
       #mapid {
         width: 100%;
@@ -279,7 +286,8 @@ footer {
     }
 
     .active {
-      display: block;
+      z-index: 555;
+      opacity: 1;
     }
   }
 }
