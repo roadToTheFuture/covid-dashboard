@@ -28,8 +28,8 @@ const DOM_INDIVIDUAL_ELEMENT = {
     toggle: { map, graph },
   },
   window: {
-    graph: winGrpah,
-    map: winMap,
+    winGrpah,
+    winMap,
     canvas: individualCanvas,
   },
 };
