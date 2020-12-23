@@ -10,7 +10,7 @@ const searchButton = DOM_INDIVIDUAL_ELEMENT.table.search.button;
 const inputElement = DOM_INDIVIDUAL_ELEMENT.table.search.input;
 
 async function getInfo() {
-  let inputValue = inputElement.value;
+  const inputValue = inputElement.value;
   const countryInfo = await getData(`${COVID.individual + inputValue}?strict=true`);
   const countryName = countryInfo.country;
   const flagSrc = countryInfo.countryInfo.flag;
@@ -24,7 +24,7 @@ async function getInfo() {
   updateDeaths(deathsInfo);
   updateRecovered(recoveredInfo);
 
-  inputValue = '';
+  inputElement.value = '';
 }
 
 searchButton.addEventListener('click', getInfo);
