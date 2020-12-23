@@ -2,7 +2,7 @@ import {
   info, title, counter, indicators, death, recovered, calculate, cases, date,
 } from '@js/elements/main/global/table.js';
 import {
-  search, input, button, country, flag, name, caseCount, deatCount, recoverCount, map, graph,
+  search, input, button, country, img, name, caseCount, deathCount, recoverCount, map, graph,
 } from '@js/elements/main/individual/table.js';
 import { globalCanvas } from '@js/elements/main/global/graph.js';
 import { winGrpah, winMap, individualCanvas, } from '@js/elements/main/individual/window.js';
@@ -21,10 +21,10 @@ const DOM_GLOBAL_ELEMENT = {
 const DOM_INDIVIDUAL_ELEMENT = {
   table: {
     search: { search, input, button },
-    country: { country, flag, name },
-    case: caseCount,
-    deat: deatCount,
-    recover: recoverCount,
+    country: { country, img, name },
+    caseCount,
+    deathCount,
+    recoverCount,
     toggle: { map, graph },
   },
   window: {
