@@ -9,9 +9,9 @@ export default async function generateCases() {
   const countryInfo = await getData(COVID.countries);
   const worldInfo = await getData(COVID.world);
   const row = [];
+
   title.textContent = 'Global Cases';
   counter.textContent = `${numberWithCommas(worldInfo.cases)}`;
-
   countryInfo.forEach((key) => {
     row.push({ country: key.country, confirmed: key.cases, today: key.todayCases });
   });
