@@ -3,11 +3,15 @@ import { getData } from '@js/events/request/getSummaryData.js';
 import { recovered, indicators, title, counter } from '@js/elements/main/global/table.js';
 import render from '@js/utils/renderTable.js';
 import numberWithCommas from '@js/utils/numberWithCommas.js';
+import renderGlobalGraph from '@js/utils/renderGlobalGraph.js';
+import sumOfMoths from '@js/utils/sumOfMoths.js';
 
 async function generateRecovered() {
   indicators.innerHTML = '';
   const countryInfo = await getData(COVID.countries);
   const worldInfo = await getData(COVID.world);
+  const graphInfo = await getData(COVID.graphGlobal);
+  const allMonth = await sumOfMoths(graphInfo, 'recovered');
   const row = [];
   title.textContent = 'Global Recovered';
   counter.textContent = `${numberWithCommas(worldInfo.recovered)}`;
@@ -29,6 +33,7 @@ async function generateRecovered() {
   ];
 
   render(head, row);
+  renderGlobalGraph(allMonth, 'line', 'Global Recovered');
 }
 
 recovered.addEventListener('click', generateRecovered);
