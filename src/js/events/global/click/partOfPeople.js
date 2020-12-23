@@ -33,7 +33,7 @@ async function generatePartOfPeople() {
   ];
 
   render(head, row);
-  renderGlobalGraph(allMonth, 'doughnut', 'Per Hundred Thousand');
+  renderGlobalGraph(allMonth, 'radar', 'Per Hundred Thousand');
 }
 
 calculate.addEventListener('click', generatePartOfPeople);
