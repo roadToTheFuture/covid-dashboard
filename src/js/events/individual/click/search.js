@@ -5,6 +5,7 @@ import countryNameFlag from '@js/events/individual/updateInfo/countryNameFlag.js
 import updateCases from '@js/events/individual/updateInfo/cases.js';
 import updateDeaths from '@js/events/individual/updateInfo/deaths.js';
 import updateRecovered from '@js/events/individual/updateInfo/recovered.js';
+import renderIndividualGraph from '@js/utils/renderIndividualGraph.js';
 import renderMap from '@js/utils/renderMap.js';
 
 const searchButton = DOM_INDIVIDUAL_ELEMENT.table.search.button;
@@ -24,6 +25,7 @@ async function getInfo() {
   updateCases(casesInfo);
   updateDeaths(deathsInfo);
   updateRecovered(recoveredInfo);
+  renderIndividualGraph([casesInfo, deathsInfo, recoveredInfo], countryName, 'polarArea');
   renderMap(coordinates, casesInfo, countryName);
 
   inputElement.value = '';

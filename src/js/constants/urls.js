@@ -4,6 +4,7 @@ const COVID = {
   map: 'https://api.covid19api.com/summary',
   individual: 'https://disease.sh/v3/covid-19/countries/',
   coordinates: 'https://raw.githubusercontent.com/Nazimkov-1984/timerJs/master/countries.json',
+  graphGlobal: 'https://disease.sh/v3/covid-19/historical?lastdays=all',
 };
 
 export { COVID };
