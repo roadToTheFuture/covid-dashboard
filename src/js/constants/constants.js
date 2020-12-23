@@ -5,7 +5,7 @@ import {
   search, input, button, country, flag, name, caseCount, deatCount, recoverCount, map, graph,
 } from '@js/elements/main/individual/table.js';
 import { globalCanvas } from '@js/elements/main/global/graph.js';
-import { winGrpah, winMap } from '@js/elements/main/individual/window.js';
+import { winGrpah, winMap, individualCanvas, } from '@js/elements/main/individual/window.js';
 
 const DOM_GLOBAL_ELEMENT = {
   table: {
@@ -30,6 +30,7 @@ const DOM_INDIVIDUAL_ELEMENT = {
   window: {
     graph: winGrpah,
     map: winMap,
+    canvas: individualCanvas,
   },
 };
 
