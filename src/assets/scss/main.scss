@@ -161,12 +161,6 @@ footer {
     margin-left: 20px;
     margin-right: 2%;
   }
-
-  canvas {
-    width: 100%;
-    height: 100%;
-    border: 1px solid red;
-  }
 }
 
 #individual {
@@ -271,7 +265,6 @@ footer {
       display: none;
       width: 100%;
       height: 100%;
-      background-color: darkgray;
     }
 
     .window__map {
@@ -289,6 +282,11 @@ footer {
       display: block;
     }
   }
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1050px) {
