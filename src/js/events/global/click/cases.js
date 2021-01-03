@@ -36,7 +36,6 @@ export default async function generateCases() {
 
   render(head, row);
   renderGlobalGraph(allMonth, 'line', 'Global Cases');
-
 }
 
 cases.addEventListener('click', generateCases);

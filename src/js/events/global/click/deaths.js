@@ -1,6 +1,8 @@
 import { COVID } from '@js/constants/urls.js';
 import { getData } from '@js/events/request/getSummaryData.js';
-import { death, indicators, title, counter } from '@js/elements/main/global/table.js';
+import {
+  death, indicators, title, counter,
+} from '@js/elements/main/global/table.js';
 import render from '@js/utils/renderTable.js';
 import numberWithCommas from '@js/utils/numberWithCommas.js';
 import renderGlobalGraph from '@js/utils/renderGlobalGraph.js';

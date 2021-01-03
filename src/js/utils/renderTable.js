@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 import { Grid } from 'ag-grid-community';
 
 export default function render(head, row) {

@@ -1,6 +1,8 @@
 import { COVID } from '@js/constants/urls.js';
 import { getData } from '@js/events/request/getSummaryData.js';
-import { calculate, indicators, title, counter } from '@js/elements/main/global/table.js';
+import {
+  calculate, indicators, title, counter,
+} from '@js/elements/main/global/table.js';
 import render from '@js/utils/renderTable.js';
 import renderGlobalGraph from '@js/utils/renderGlobalGraph.js';
 import sumOfMoths from '@js/utils/sumOfMoths.js';

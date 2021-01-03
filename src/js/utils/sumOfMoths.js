@@ -1,3 +1,6 @@
+/* eslint-disable default-case */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable guard-for-in */
 export default function sumOfMoths(arr, type) {
   const result = [[], [], [], [], [], [], [], [], [], [], [], []];
   const months = [];

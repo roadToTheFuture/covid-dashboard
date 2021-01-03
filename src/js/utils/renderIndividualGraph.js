@@ -2,7 +2,8 @@ import Chart from 'chart.js';
 import { DOM_INDIVIDUAL_ELEMENT } from '@js/constants/constants.js';
 
 export default function renderIndividualGraph(arr, country, graphType) {
-  const myChart = new Chart(DOM_INDIVIDUAL_ELEMENT.window.canvas, {
+  const graph = DOM_INDIVIDUAL_ELEMENT.window.canvas;
+  const myChart = new Chart(graph, {
     type: graphType,
     data: {
       labels: ['Case', 'Deaths', 'Recovered'],
@@ -32,4 +33,5 @@ export default function renderIndividualGraph(arr, country, graphType) {
       },
     },
   });
+  return myChart;
 }

@@ -1,6 +1,7 @@
+/* eslint-disable no-undef */
 import { createDomElement } from '@js/utils/createDomElement.js';
-export default function renderMap(coordinates, casesInfo, countryName) {
 
+export default function renderMap(coordinates, casesInfo, countryName) {
   const oldMap = document.getElementById('mapid');
   oldMap.parentNode.removeChild(oldMap);
 
@@ -25,4 +26,4 @@ export default function renderMap(coordinates, casesInfo, countryName) {
     radius: casesInfo / 15,
   }).addTo(mymap);
   circle.bindPopup(` Total confirmed Covid-19 ${casesInfo} peoples in ${countryName}`);
-};
+}

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 async function getData(dataUrl) {
   try {
     const url = dataUrl;
@@ -6,6 +7,7 @@ async function getData(dataUrl) {
     return data;
   } catch (err) {
     console.error(err);
+    return err;
   }
 }
 

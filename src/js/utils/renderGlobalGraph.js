@@ -2,6 +2,7 @@ import Chart from 'chart.js';
 import { DOM_GLOBAL_ELEMENT } from '@js/constants/constants.js';
 
 export default function renderGlobalGraph(summ, graphType, name) {
+  // eslint-disable-next-line no-unused-vars
   const myChart = new Chart(DOM_GLOBAL_ELEMENT.graph, {
     type: graphType,
     data: {

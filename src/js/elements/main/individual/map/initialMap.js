@@ -1,6 +1,6 @@
 import { COVID } from '@js/constants/urls.js';
 /* eslint-disable no-undef */
-const initialMap = function (x, y) {
+function initialMap(x, y) {
   const mymap = L.map('mapid').setView(x, y);
 
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibXlrb2xhLW5hemlta292IiwiYSI6ImNraXhnbHhuYTFyc3QzMm1tMzQ5eHA5ZHcifQ.I-eL5R52CFRxbUTbk79slQ', {
@@ -46,7 +46,7 @@ const initialMap = function (x, y) {
           }
         });
     });
-};
+}
 
 initialMap([0.00, 15.00], 2);
 
