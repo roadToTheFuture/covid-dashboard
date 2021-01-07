@@ -1,5 +1,6 @@
 import Chart from 'chart.js';
 import { DOM_INDIVIDUAL_ELEMENT } from '@js/constants/constants.js';
+import numberWithCommas from '@js/utils/numberWithCommas.js';
 
 export default function renderIndividualGraph(arr, country, graphType) {
   const graph = DOM_INDIVIDUAL_ELEMENT.window.canvas;
@@ -30,6 +31,17 @@ export default function renderIndividualGraph(arr, country, graphType) {
             beginAtZero: true,
           },
         }],
+      },
+      tooltips: {
+        callbacks: {
+          label(value, data) {
+            return ` ${data.datasets[0].label} : ${numberWithCommas(value.yLabel)}`;
+          },
+          title(value, data) {
+            const infoIndex = value[0].index;
+            return data.labels[infoIndex];
+          },
+        },
       },
     },
   });

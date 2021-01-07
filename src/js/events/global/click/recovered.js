@@ -35,7 +35,7 @@ async function generateRecovered() {
   ];
 
   render(head, row);
-  renderGlobalGraph(allMonth, 'line', 'Global Recovered');
+  renderGlobalGraph(allMonth, 'line', 'Global Recovered 2020');
 }
 
 recovered.addEventListener('click', generateRecovered);

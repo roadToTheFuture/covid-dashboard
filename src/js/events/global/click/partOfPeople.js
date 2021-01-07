@@ -35,7 +35,7 @@ async function generatePartOfPeople() {
   ];
 
   render(head, row);
-  renderGlobalGraph(allMonth, 'radar', 'Per Hundred Thousand');
+  renderGlobalGraph(allMonth, 'radar', 'Per Hundred Thousand 2020');
 }
 
 calculate.addEventListener('click', generatePartOfPeople);

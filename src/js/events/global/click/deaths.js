@@ -35,7 +35,7 @@ async function generateDeaths() {
   ];
 
   render(head, row);
-  renderGlobalGraph(allMonth, 'bar', 'Global Deaths');
+  renderGlobalGraph(allMonth, 'bar', 'Global Deaths 2020');
 }
 
 death.addEventListener('click', generateDeaths);

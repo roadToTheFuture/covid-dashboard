@@ -35,7 +35,7 @@ export default async function generateCases() {
   ];
 
   render(head, row);
-  renderGlobalGraph(allMonth, 'line', 'Global Cases');
+  renderGlobalGraph(allMonth, 'line', 'Global Cases 2020');
 }
 
 cases.addEventListener('click', generateCases);

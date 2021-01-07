@@ -1,6 +1,5 @@
 @import "utils/libs";
 @import "utils/vars";
-@import "utils/mixins";
 @import "utils/fonts";
 @import "utils/reset";
 
@@ -164,7 +163,7 @@ footer {
     }
 
     .table__indicators {
-      background-color: $table;
+      background-color: $countriesList;
       flex-grow: 1;
     }
   }
@@ -194,6 +193,7 @@ footer {
     height: 80%;
     min-height: 400px;
     background-color: $generalColor;
+    border: 1px solid $borderColor;
 
     .search {
       display: flex;
@@ -210,7 +210,7 @@ footer {
       .search__button {
         height: 30px;
         border-radius: 10px;
-        background-color: $textOnBLack;
+        background-color: $searchButtonColor;
         &:hover {
           background-color: $hover;
           cursor: pointer;
@@ -222,16 +222,15 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 300px;
       height: 50px;
       padding-top: 20px;
       padding-bottom: 10px;
-      background-color: $table;
+      background-color: $countryInfo;
       cursor: context-menu;
       .country__flag {
         width: 40px;
         height: 30px;
-        background-color: $buttonColor;
+        background-color: $countryInfo;
         margin-right: 10px;
 
         img {
@@ -249,7 +248,7 @@ footer {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      background-color: $table;
+      background-color: $countryInfo;
 
       .case,
       .deat,
